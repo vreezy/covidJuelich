@@ -30,7 +30,7 @@ jobs:
         # FTP server name (you may need to specify a port)
         FTP_SERVER: vreezy.de
         # FTP account username
-        FTP_USERNAME: ${{ secrets.FTP_USERNAMEx }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         # FTP account password
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         # Protocol used to deploy (ftp or sftp)
