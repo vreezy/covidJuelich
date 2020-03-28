@@ -1,18 +1,30 @@
-<nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">Corona Jülich</span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Corona Jülich</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" href="#">Angebote</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/information" routerLinkActive="active" href="#">Informationen</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/impressum" routerLinkActive="active" href="#">Impressum</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <br>
 <br>
 
 <div class="container">
-  <ngb-tabset type="pills">
-    <ngb-tab *ngFor="let value of categories; index as i" title={{value}}>
-      <ng-template ngbTabContent>
-        <app-element [data]="data" [categorie]="value"></app-element>
-      </ng-template>
-    </ngb-tab>
-  </ngb-tabset>
+  <router-outlet></router-outlet>
 </div>
 
-<!-- <router-outlet></router-outlet> -->
+<div>
+  
+</div>

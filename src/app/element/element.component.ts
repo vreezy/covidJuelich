@@ -30,6 +30,15 @@ export class ElementComponent implements OnInit {
 
     console.log(filteredData)
     this.filteredData = filteredData;
+  }
 
+  cleanNumber(number: string): string {
+    let newNumber = number.replace(/\s/g, "")
+    newNumber = newNumber.replace(/\D/g,'');
+
+    if(newNumber.substring(0, 1) === "0") {
+      newNumber = "49" + newNumber.substr(1);
+    }
+    return newNumber;
   }
 }

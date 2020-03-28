@@ -1,0 +1,7 @@
+<ngb-tabset type="pills">
+    <ngb-tab *ngFor="let value of categories; index as i" title={{value}}>
+      <ng-template ngbTabContent>
+        <app-element [data]="data" [categorie]="value"></app-element>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
