@@ -1,30 +1,33 @@
 <style>
-.col-12 {
-  margin-bottom: 7px;
-}
-
+  .col-12 {
+    margin-bottom: 7px;
+  }
 </style>
 <div *ngFor="let value of filteredData; index as i">
 
   <div class="jumbotron">
-    <h1 class="display-4" style="font-size: 3rem; word-wrap: break-word; overflow-wrap: break-word;">{{value.anbieter}}</h1>
-    <p class="lead">{{value["kurzbeschreibung angebot"]}}</p>
+    <div class="container">
+      <h1 class="display-4" style="font-size: 3rem; word-wrap: break-word; overflow-wrap: break-word;">{{value.anbieter}}
+      </h1>
+      <p class="lead">{{value["kurzbeschreibung angebot"]}}</p>
+    </div>
 
     <hr class="my-4">
     <div class="container">
       <div class="row">
+        <!-- <div class="col-12 col-lg-2">
+          <p>Angebot:</p>
+        </div> -->
         <div class="col-12 col-lg-2" *ngIf="value['link zum angebot']">
-          <a href="{{value['link zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Angebot</a>
+          <a href="{{value['link zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#"
+            role="button">Angebot</a>
         </div>
         <div class="col-12 col-lg-3" *ngIf="value['zus. links zum angebot']">
-          <a *ngIf="value['zus. links zum angebot']" href="{{value['zus. links zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Angebot 2</a>
+          <a *ngIf="value['zus. links zum angebot']" href="{{value['zus. links zum angebot']}}" target="_blank"
+            class="btn btn-primary btn-lg" href="#" role="button">Angebot 2</a>
         </div>
       </div>
-    </div>
 
-    <hr class="my-4">
-    <p>Angebot:</p>
-    <div class="container">
       <div class="row">
         <div class="col-12 col-lg-2" *ngIf="value['lieferung?']">
           Lieferung: {{value['lieferung?']}}
@@ -36,13 +39,24 @@
           Sonstiges: {{value['sonstiges']}}
         </div>
       </div>
+      <div class="row" *ngIf="value['öffnungszeiten']">
+        <div class="col-12 col-lg-2">
+          <p>Öffnungszeiten:</p>
+        </div>
+        <div class="col">
+          <p>{{value['öffnungszeiten']}}</p>
+        </div>
+      </div>
     </div>
 
+
     <hr class="my-4">
-    <p>Kontakt:</p>
+
     <div class="container">
       <div class="row">
-        
+        <!-- <div class="col-12 col-lg-2">
+          Kontakt:
+        </div> -->
         <div class="col-12 col-lg-4" *ngIf="value['anschrift']">
           {{value['anschrift']}}
         </div>
@@ -53,7 +67,8 @@
           <a href="tel:{{value['whatsapp']}}">{{value['whatsapp']}}</a>
         </div>
         <div class="col-12 col-lg-1" *ngIf="value['whatsapp']">
-          <a href="https://wa.me/{{cleanNumber(value['whatsapp'])}}" target="_blank"> <img src="./assets/whatsapp.svg" width="30rem"></a>
+          <a href="https://wa.me/{{cleanNumber(value['whatsapp'])}}" target="_blank"> <img src="./assets/whatsapp.svg"
+              width="30rem"></a>
         </div>
         <div class="col-12 col-lg-7" *ngIf="value['webseite']">
           <a href="{{value['webseite']}}" target="_blank">{{value['webseite']}}</a>
@@ -61,26 +76,14 @@
         <div class="col-12 col-lg-7" *ngIf="value['e-mail']">
           <a href="mailto:{{value['e-mail']}}" target="_blank">{{value['e-mail']}}</a>
         </div>
-
-
-
-        
       </div>
     </div>
-
-    <hr class="my-4">
-    <p>Öffnungszeiten:</p>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p>{{value['öffnungszeiten']}}</p>
-        </div>
-      </div>
-    </div>
-
-
   </div>
-
   <!-- {{value | json}} -->
-
 </div>
+
+<br>
+
+<br>
+<br>
+
