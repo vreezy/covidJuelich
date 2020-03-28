@@ -54,6 +54,11 @@
         <div class="col-12 col-lg-7" *ngIf="value['webseite']">
           <a href="{{value['webseite']}}" target="_blank">{{value['webseite']}}</a>
         </div>
+        <div class="col-12 col-lg-7" *ngIf="value['e-mail']">
+          <a href="mailto:{{value['e-mail']}}" target="_blank">{{value['e-mail']}}</a>
+        </div>
+
+        
       </div>
     </div>
 
@@ -70,6 +75,6 @@
 
   </div>
 
-  <!-- {{value | json}} -->
+  {{value | json}}
 
 </div>
