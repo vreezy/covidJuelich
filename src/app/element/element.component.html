@@ -1,0 +1,55 @@
+
+
+<div *ngFor="let value of filteredData; index as i">
+
+
+    <div class="jumbotron">
+        <h1 class="display-4">{{value.anbieter}}</h1>
+        <p class="lead">{{value["kurzbeschreibung angebot"]}}</p>
+
+        <hr class="my-4">
+        <p>Angebot:</p>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                Lieferung: {{value['lieferung?']}}
+              </div>
+              <div class="col-sm">
+                Selbstabholung: {{value['selbstabholung?']}}
+              </div>
+              <div class="col-sm">
+                Sonstiges: {{value['sonstiges']}}
+              </div>
+            </div>
+          </div>
+
+        <hr class="my-4">
+        <p>Kontakt:</p>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                Telefon: {{value['telefon']}}
+              </div>
+              <div class="col-sm">
+                Whatsapp: {{value['whatsapp']}}
+              </div>
+              <div class="col-sm">
+                Webseite: <a href="{{value['webseite']}}" target="_blank">{{value['webseite']}}</a>
+              </div>
+            </div>
+          </div>
+
+        <hr class="my-4">
+        <p>Öffnungszeiten:</p>
+        <p>{{value['öffnungszeiten']}}</p>
+
+        <hr class="my-4">
+        <a href="{{value['link zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">LINK 1</a>
+        &nbsp;&nbsp;&nbsp;
+        <a *ngIf="value['zus. links zum angebot']" href="{{value['zus. links zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">LINK 2</a>
+    </div>
+
+    <!-- {{value | json}} -->
+
+</div>

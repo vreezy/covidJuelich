@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Corona Jülich</span>
+</nav>
+
+<br>
+<br>
+
+<div class="container">
+  <ngb-tabset type="pills">
+    <ngb-tab *ngFor="let value of categories; index as i" title={{value}}>
+      <ng-template ngbTabContent>
+        <app-element [data]="data" [categorie]="value"></app-element>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
