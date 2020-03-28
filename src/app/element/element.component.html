@@ -7,17 +7,14 @@
 
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-4" style="font-size: 3rem; word-wrap: break-word; overflow-wrap: break-word;">{{value.anbieter}}
-      </h1>
-      <p class="lead">{{value["kurzbeschreibung angebot"]}}</p>
-    </div>
-
-    <hr class="my-4">
-    <div class="container">
       <div class="row">
-        <!-- <div class="col-12 col-lg-2">
-          <p>Angebot:</p>
-        </div> -->
+        <div class="col">
+          <h1 class="display-4" style="font-size: 3rem; word-wrap: break-word; overflow-wrap: break-word;">{{value.anbieter}}
+          </h1>
+          <p class="lead">{{value["kurzbeschreibung angebot"]}}</p>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-12 col-lg-2" *ngIf="value['link zum angebot']">
           <a href="{{value['link zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#"
             role="button">Angebot</a>
@@ -27,7 +24,10 @@
             class="btn btn-primary btn-lg" href="#" role="button">Angebot 2</a>
         </div>
       </div>
+    </div>
 
+    <hr class="my-4">
+    <div class="container">
       <div class="row">
         <div class="col-12 col-lg-2" *ngIf="value['lieferung?']">
           Lieferung: {{value['lieferung?']}}
