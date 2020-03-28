@@ -14,10 +14,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-2" *ngIf="value['link zum angebot']">
-          <a href="{{value['link zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Speisekarte</a>
+          <a href="{{value['link zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Angebot</a>
         </div>
         <div class="col-12 col-lg-3" *ngIf="value['zus. links zum angebot']">
-          <a *ngIf="value['zus. links zum angebot']" href="{{value['zus. links zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Speisekarte 2</a>
+          <a *ngIf="value['zus. links zum angebot']" href="{{value['zus. links zum angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Angebot 2</a>
         </div>
       </div>
     </div>
@@ -26,13 +26,13 @@
     <p>Angebot:</p>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-2">
+        <div class="col-12 col-lg-2" *ngIf="value['lieferung?']">
           Lieferung: {{value['lieferung?']}}
         </div>
-        <div class="col-12 col-lg-2">
+        <div class="col-12 col-lg-2" *ngIf="value['selbstabholung?']">
           Selbstabholung: {{value['selbstabholung?']}}
         </div>
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-lg-8" *ngIf="value['sonstiges']">
           Sonstiges: {{value['sonstiges']}}
         </div>
       </div>
@@ -42,6 +42,10 @@
     <p>Kontakt:</p>
     <div class="container">
       <div class="row">
+        
+        <div class="col-12 col-lg-4" *ngIf="value['anschrift']">
+          {{value['anschrift']}}
+        </div>
         <div class="col-12 col-lg-2" *ngIf="value['telefon']">
           <a href="tel:{{value['telefon']}}">{{value['telefon']}}</a>
         </div>
@@ -57,6 +61,8 @@
         <div class="col-12 col-lg-7" *ngIf="value['e-mail']">
           <a href="mailto:{{value['e-mail']}}" target="_blank">{{value['e-mail']}}</a>
         </div>
+
+
 
         
       </div>
