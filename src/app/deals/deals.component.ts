@@ -1,7 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-
 import GSheetReader from 'g-sheets-api';
-
 
 @Component({
   selector: 'app-deals',
@@ -22,7 +20,7 @@ export class DealsComponent implements OnInit {
 
   getData(): void {
 
-    // vreezy 1Zq_ogpWQ1CKCtjEt3lowr3JMnmVz4UGpLm4djt1hUe0
+    // test data 1Zq_ogpWQ1CKCtjEt3lowr3JMnmVz4UGpLm4djt1hUe0
     const options = {
       sheetId: '1KQ-Ii2C16PUdd3e0Olhb2RQgvKPfA4oIbx4UrBAViw8',
       returnAllResults: true,
@@ -43,8 +41,6 @@ export class DealsComponent implements OnInit {
       categories.sort();
       this.categories =  [...new Set(categories)]; ;
     });
-
-
   }
 
   shuffleArray(array) {
