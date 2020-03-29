@@ -24,7 +24,7 @@ jobs:
       run: |
         npm i @angular/cli@9.1.0
         npm install
-        ng build --prod
+        npm run build
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
