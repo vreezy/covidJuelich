@@ -2,26 +2,23 @@ import { Component, OnInit, Output } from '@angular/core';
 import GSheetReader from 'g-sheets-api';
 
 @Component({
-  selector: 'app-deals',
-  templateUrl: './deals.component.html',
-  styleUrls: ['./deals.component.scss']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.scss']
 })
-export class DealsComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
   constructor() { }
 
   @Output() data: any[] = [];
   @Output() categories: string[] = [];
 
-  ngOnInit() {
-    this.getData("1ercM9YmdevykM-jjly6WqIqhJSowH55UEHDSXx-hFUk");
-    this.getData("19uLovFswFxFzV54mkCUhfvZ_oPzgqEomhJ39Xuv_1iw");    
+  ngOnInit(): void {
+    this.getData("17I6GPitevZTXHUDOJci1ul_Ra3x14DXfhxyan58XZEE");
   }
-  
+
   getData(id: string): void {
 
-    // test data 1Zq_ogpWQ1CKCtjEt3lowr3JMnmVz4UGpLm4djt1hUe0
-    // alt 1KQ-Ii2C16PUdd3e0Olhb2RQgvKPfA4oIbx4UrBAViw8
     const options = {
       sheetId: id,
       returnAllResults: true,
@@ -56,4 +53,5 @@ export class DealsComponent implements OnInit {
         array[j] = temp;
     }
   }
+
 }

@@ -1,0 +1,46 @@
+<style>
+    .col-12 {
+      margin-bottom: 7px;
+    }
+  </style>
+  
+  <div *ngFor="let value of filteredData; index as i">
+  
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+  
+            <h1 class="display-4" style="font-size: 3rem; word-wrap: break-word; overflow-wrap: break-word;">
+              {{value.titel}}
+            </h1>
+  
+            <p class="lead">{{value["kurzbeschreibung"]}}</p>
+          </div>
+        </div>
+      </div>
+  
+  
+  
+      <hr class="my-4">
+        <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4" *ngIf="value['anschrift']">
+            {{value['anschrift']}}
+          </div>
+          <div class="col-12 col-lg-2" *ngIf="value['telefon']">
+            <a href="tel:{{value['telefon']}}">{{value['telefon']}}</a>
+          </div>
+          <div class="col-12 col-lg-4" *ngIf="value['email']">
+            <a href="mailto:{{value['email']}}" target="_blank">{{value['email']}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- {{value | json}} -->
+  </div>
+  
+  <br>
+  
+  <br>
+  <br>

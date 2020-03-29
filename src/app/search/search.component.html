@@ -1,0 +1,14 @@
+<header>
+    <h1>Suche</h1>
+  </header>
+  <!-- {{data | json}} -->
+  <ngb-tabset type="pills">
+  
+      <ngb-tab *ngFor="let value of categories; index as i" title={{value}}>
+        <ng-template ngbTabContent>
+          <br>
+          <app-search-element [data]="data" [categorie]="value"></app-search-element>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  

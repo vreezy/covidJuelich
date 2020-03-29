@@ -1,7 +1,9 @@
 <header>
   <h1>Angebote</h1>
 </header>
+<!-- {{data | json}} -->
 <ngb-tabset type="pills">
+
     <ngb-tab *ngFor="let value of categories; index as i" title={{value}}>
       <ng-template ngbTabContent>
         <br>

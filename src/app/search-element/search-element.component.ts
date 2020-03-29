@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-element',
-  templateUrl: './element.component.html',
-  styleUrls: ['./element.component.scss']
+  selector: 'app-search-element',
+  templateUrl: './search-element.component.html',
+  styleUrls: ['./search-element.component.scss']
 })
-export class ElementComponent implements OnInit {
+export class SearchElementComponent implements OnInit {
   @Input() data: any[];
   @Input() categorie: number;
 
@@ -41,4 +41,5 @@ export class ElementComponent implements OnInit {
     }
     return newNumber;
   }
+
 }

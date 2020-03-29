@@ -12,11 +12,17 @@ import { MenuComponent } from './menu/menu.component';
 import { DealsComponent } from './deals/deals.component';
 import { InformationComponent } from './information/information.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { RegisterComponent } from './register/register.component';
+import { SearchComponent } from './search/search.component';
+import { SearchElementComponent } from './search-element/search-element.component';
 
 const appRoutes: Routes = [
   { path: '',               component: DealsComponent },
+  { path: 'search',         component: SearchComponent },
   { path: 'information',    component: InformationComponent },
+  { path: 'register',         component: RegisterComponent },
   { path: 'impressum',         component: ImpressumComponent },
+  
   // { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -28,7 +34,10 @@ const appRoutes: Routes = [
     MenuComponent,
     DealsComponent,
     ImpressumComponent,
-    InformationComponent
+    InformationComponent,
+    RegisterComponent,
+    SearchComponent,
+    SearchElementComponent
   ],
   imports: [
     RouterModule.forRoot(
