@@ -1,4 +1,4 @@
-https://github.com/bpk68/g-sheets-api#set-up-a-google-sheet
+
 
 # CoronaJuelich
 
