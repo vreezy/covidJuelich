@@ -15,13 +15,17 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { SearchElementComponent } from './search-element/search-element.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 const appRoutes: Routes = [
-  { path: '',               component: DealsComponent },
-  { path: 'search',         component: SearchComponent },
-  { path: 'information',    component: InformationComponent },
-  { path: 'register',         component: RegisterComponent },
-  { path: 'impressum',         component: ImpressumComponent },
+  { path: 'offer',         component: DealsComponent },
+  { path: 'search',        component: SearchComponent },
+  { path: 'information',   component: InformationComponent },
+  { path: 'register',      component: RegisterComponent },
+  { path: 'impressum',     component: ImpressumComponent },
   
   // { path: '**', component: PageNotFoundComponent }
 ];
@@ -47,7 +51,8 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

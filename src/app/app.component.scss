@@ -1,0 +1,40 @@
+
+body {
+    overflow: scroll;
+}
+.website {
+    // border: 6px solid red;
+    min-height: 100%;
+    display: grid;
+    // grid-template-rows: auto auto auto;
+
+}
+
+.topnav {
+    // border: 6px solid blue;
+}
+
+.main {
+    min-height: 92vh;
+    // border: 6px solid green;
+    
+}
+
+.footer {
+    border-top: 20px solid #777777;
+    // border: 6px solid #8900b3;
+    width: 100%;
+    align-self: end;
+
+}
+
+.handymenu {
+    padding: 6%;
+}
+
+.handyitem {
+    margin-bottom: 4px;
+}
+
+
+

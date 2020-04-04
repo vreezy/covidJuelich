@@ -15,6 +15,12 @@ export class AppComponent {
 
   }
 
+  public opened: boolean = false;
+ 
+  public toggleSidebar() {
+    this.opened = !this.opened;
+  }
+
 
 
 }

@@ -1,13 +1,45 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="website">
 
-  <div class="row d-lg-none d-xl-none">
-    <div class="col">
-      <div ngbDropdown class="d-inline-block" placement="bottem" autoClose="inside">
-        <button class="btn btn-outline-primary " id="dropdownBasic2" ngbDropdownToggle><span
-            class="navbar-toggler-icon"></span></button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-          <li class="nav-item active">
-            <a class="nav-link" routerLink="/" routerLinkActive="active" href="#">Angebote</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark topnav">
+    <div class="container">
+      <!-- <div class="row d-lg-none d-xl-none">
+
+        <div class="col">
+          <div ngbDropdown class="d-inline-block" placement="bottem" autoClose="inside">
+            <button class="btn btn-outline-primary " id="dropdownBasic2" ngbDropdownToggle><span
+                class="navbar-toggler-icon"></span></button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/offer" routerLinkActive="active" href="#">Angebote</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/search" routerLinkActive="active" href="#">Suche</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/register" routerLinkActive="active" href="#">Eintragen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/information" routerLinkActive="active" href="#">Informationen</a>
+              </li>
+
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="row">
+        <div class="col">
+          <a class="navbar-brand" href="#/offer">Covid Jülich</a>
+        </div>
+      </div>
+
+      <button class="btn d-lg-none d-xl-none" (click)="toggleSidebar()" ><span class="navbar-toggler-icon"></span></button>
+
+
+      <div class="d-none d-lg-block d-xl-block">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/offer" routerLinkActive="active" href="#">Angebote</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/search" routerLinkActive="active" href="#">Suche</a>
@@ -18,49 +50,55 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/information" routerLinkActive="active" href="#">Informationen</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/impressum" routerLinkActive="active" href="#">Impressum</a>
-          </li>
-        </div>
+
+        </ul>
       </div>
+    </div>
+  </nav>
+
+  <div class="main"*ngIf="opened">
+    <div class="handymenu">
+      <ul class="navbar-nav">
+        <li class="nav-item handyitem">
+          <a class="nav-link" class="btn btn-primary btn-lg btn-block" routerLink="/offer" routerLinkActive="active" href="#" (click)="toggleSidebar()">Angebote</a>
+        </li>
+        <li class="nav-item handyitem">
+          <a class="nav-link" class="btn btn-primary btn-lg btn-block" routerLink="/search" routerLinkActive="active" href="#" (click)="toggleSidebar()">Suche</a>
+        </li>
+        <li class="nav-item handyitem">
+          <a class="nav-link" class="btn btn-primary btn-lg btn-block" routerLink="/register" routerLinkActive="active" href="#" (click)="toggleSidebar()">Eintragen</a>
+        </li>
+        <li class="nav-item handyitem">
+          <a class="nav-link" class="btn btn-primary btn-lg btn-block" routerLink="/information" routerLinkActive="active" href="#" (click)="toggleSidebar()">Informationen</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="main" *ngIf="!opened">
+    <div class="container">
+      <br><br>
+      <router-outlet></router-outlet>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col">
-  <a class="navbar-brand" href="#">Covid Jülich</a>
-  </div>
-</div>
+  <footer class="footer">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/impressum" routerLinkActive="active" href="#">Impressum</a>
+              </li>
 
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  <div class="d-none d-lg-block d-xl-block">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/" routerLinkActive="active" href="#">Angebote</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/search" routerLinkActive="active" href="#">Suche</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/register" routerLinkActive="active" href="#">Eintragen</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/information" routerLinkActive="active" href="#">Informationen</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/impressum" routerLinkActive="active" href="#">Impressum</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<br>
-<br>
-
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
-
-<div style="height: 500px; background-color: #ffffff;">
-
+    </nav>
+  </footer>
 </div>

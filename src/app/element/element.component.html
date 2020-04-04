@@ -18,68 +18,66 @@
           <p class="lead">{{value["kurzbeschreibung"]}}</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-lg-2" *ngIf="value['angebot']">
-          <a href="{{value['angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#"
-            role="button">Angebot</a>
+      <div class="row justify-content-start">
+        <div class="col-12 col-lg-3" *ngIf="value['angebot']">
+          <a href="{{value['angebot']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Angebot</a>
         </div>
         <div class="col-12 col-lg-3" *ngIf="value['angebot2']">
-          <a *ngIf="value['angebot2']" href="{{value['angebot2']}}" target="_blank"
-            class="btn btn-primary btn-lg" href="#" role="button">Angebot 2</a>
+          <a *ngIf="value['angebot2']" href="{{value['angebot2']}}" target="_blank" class="btn btn-primary btn-lg" href="#" role="button">Angebot 2</a>
         </div>
       </div>
     </div>
 
     <hr class="my-4">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-2" *ngIf="value['lieferung']">
+      <div class="row justify-content-start">
+        <div class="col-12 col-lg-3" *ngIf="value['lieferung']">
           Lieferung: {{value['lieferung']}}
         </div>
-        <div class="col-12 col-lg-2" *ngIf="value['abholung']">
+
+        <div class="col-12 col-lg-3" *ngIf="value['abholung']">
           Selbstabholung: {{value['abholung']}}
         </div>
-        <div class="col-12 col-lg-8" *ngIf="value['sonstiges']">
+
+        <div class="col-12 col-lg-12" *ngIf="value['sonstiges']">
           Sonstiges: {{value['sonstiges']}}
         </div>
-      </div>
-      <div class="row" *ngIf="value['öffnungszeiten']">
-        <div class="col-12 col-lg-2">
-          <p>Öffnungszeiten:</p>
+
+        <div class="col-12 col-lg-12" *ngIf="value['öffnungszeiten']">
+          Öffnungszeiten: {{value['öffnungszeiten']}}
         </div>
-        <div class="col">
-          <p>{{value['öffnungszeiten']}}</p>
+
+        <div class="col-12 col-lg-12" *ngIf="value['anschrift']">
+          Anschrift: {{value['anschrift']}}
         </div>
+
       </div>
     </div>
 
 
     <hr class="my-4">
-
     <div class="container">
-      <div class="row">
-        <!-- <div class="col-12 col-lg-2">
-          Kontakt:
-        </div> -->
-        <div class="col-12 col-lg-4" *ngIf="value['anschrift']">
-          {{value['anschrift']}}
+      <div class="row justify-content-start">
+        <div class="col-3 col-lg-1" *ngIf="value['telefon']">
+          <a href="tel:{{value['telefon']}}"><i class="ms-Icon ms-Icon--Phone" aria-hidden="true"></i></a>
         </div>
-        <div class="col-12 col-lg-2" *ngIf="value['telefon']">
-          <a href="tel:{{value['telefon']}}">{{value['telefon']}}</a>
+
+        <div class="col-3 col-lg-1" *ngIf="value['mobil']">
+          <a href="tel:{{value['mobil']}}"><i class="ms-Icon ms-Icon--CellPhone" aria-hidden="true"></i></a>
         </div>
-        <div class="col-12 col-lg-2" *ngIf="value['mobil']">
-          <a href="tel:{{value['mobil']}}">{{value['mobil']}}</a>
+
+        <div class="col-3 col-lg-1" *ngIf="value['whatsapp']">
+          <a href="https://wa.me/{{cleanNumber(value['whatsapp'])}}" target="_blank"><i class="ms-Icon ms-Icon--Message" aria-hidden="true"></i></a>
         </div>
-        <div class="col-12 col-lg-1" *ngIf="value['whatsapp']">
-          <a href="https://wa.me/{{cleanNumber(value['whatsapp'])}}" target="_blank"> <img src="./assets/whatsapp.svg"
-              width="30rem" alt="Whatsapp öffnen"></a>
+
+        <div class="col-3 col-lg-1" *ngIf="value['webseite']">
+          <a href="{{value['webseite']}}" target="_blank"><i class="ms-Icon ms-Icon--Website" aria-hidden="true"></i></a>
         </div>
-        <div class="col-12 col-lg-7" *ngIf="value['webseite']">
-          <a href="{{value['webseite']}}" target="_blank">{{value['webseite']}}</a>
+
+        <div class="col-3 col-lg-1" *ngIf="value['email']">
+          <a href="mailto:{{value['email']}}" target="_blank"><i class="ms-Icon ms-Icon--Mail" aria-hidden="true"></i></a>
         </div>
-        <div class="col-12 col-lg-7" *ngIf="value['email']">
-          <a href="mailto:{{value['email']}}" target="_blank">{{value['email']}}</a>
-        </div>
+
       </div>
     </div>
   </div>
