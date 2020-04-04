@@ -21,6 +21,11 @@ export class AppComponent {
     this.opened = !this.opened;
   }
 
-
+  public isNewUrl() {
+    if(window.location.hostname === "xn--covid-jlich-zhb.de") {
+      return true;
+    }
+    return false;
+  }
 
 }

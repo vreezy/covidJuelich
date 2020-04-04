@@ -58,6 +58,12 @@
     </div>
   </nav>
 
+  <div class="alert alert-warning" role="alert" *ngIf="!isNewUrl()">
+    <div class="container">
+      Bitte aktualisiere deine Bookmarks auf <a href="https://www.covid-jülich.de" class="alert-link">https://www.covid-jülich.de</a>.
+    </div>
+  </div>
+
   <div class="main" *ngIf="opened">
     <div class="handymenu">
       <ul class="navbar-nav">
