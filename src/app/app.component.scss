@@ -10,13 +10,17 @@ body {
 
 }
 
-.topnav {
-    // border: 6px solid blue;
-}
+// .topnav {
+//     // border: 6px solid blue;
+// }
 
 .main {
     min-height: 92vh;
     // border: 6px solid green;
+    -webkit-animation: fadein 0.5s normal; /* Safari 4+ */
+    -moz-animation:    fadein 0.5s normal; /* Fx 5+ */
+    -o-animation:      fadein 0.5s normal; /* Opera 12+ */
+    animation:         fadein 0.5s normal; /* IE 10+, Fx 29+ */
     
 }
 
@@ -35,6 +39,30 @@ body {
 .handyitem {
     margin-bottom: 4px;
 }
+
+
+  
+
+@keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 
 
 
