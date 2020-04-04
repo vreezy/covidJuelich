@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   public isNewUrl() {
-    if(window.location.hostname === "xn--covid-jlich-zhb.de") {
+    if(window.location.hostname === "xn--covid-jlich-zhb.de" || window.location.hostname === "www.xn--covid-jlich-zhb.de") {
       return true;
     }
     return false;
