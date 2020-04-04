@@ -33,7 +33,9 @@
         </div>
       </div>
 
-      <button class="btn d-lg-none d-xl-none" (click)="toggleSidebar()" ><span class="navbar-toggler-icon"></span></button>
+      <button class="btn d-lg-none d-xl-none" (click)="toggleSidebar()" *ngIf="!opened"><i class="ms-Icon ms-Icon--GlobalNavButton" aria-hidden="true" style="color: #ffffff"></i></button>
+      <button class="btn d-lg-none d-xl-none" (click)="toggleSidebar()" *ngIf="opened" ><i class="ms-Icon ms-Icon--Cancel" aria-hidden="true" style="color: #ffffff"></i></button>
+      
 
 
       <div class="d-none d-lg-block d-xl-block">
