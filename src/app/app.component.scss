@@ -5,6 +5,7 @@ body {
 .website {
     // border: 6px solid red;
     min-height: 100%;
+    max-width: 100vw;
     display: grid;
     // grid-template-rows: auto auto auto;
 
@@ -16,6 +17,7 @@ body {
 
 .main {
     min-height: 92vh;
+    max-width: 100vw;
     // border: 6px solid green;
     -webkit-animation: fadein 0.5s normal; /* Safari 4+ */
     -moz-animation:    fadein 0.5s normal; /* Fx 5+ */
