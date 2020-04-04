@@ -2,12 +2,15 @@
   <h1>Angebote</h1>
 </header>
 <!-- {{data | json}} -->
-<ngb-tabset type="pills">
 
-    <ngb-tab *ngFor="let value of categories; index as i" title={{value}}>
-      <ng-template ngbTabContent>
-        <br>
-        <app-element [data]="data" [categorie]="value"></app-element>
-      </ng-template>
-    </ngb-tab>
-  </ngb-tabset>
+<app-loading *ngIf="loading"></app-loading>
+
+<ngb-tabset type="pills" *ngIf="!loading">
+
+  <ngb-tab *ngFor="let value of categories; index as i" title={{value}}>
+    <ng-template ngbTabContent>
+      <br>
+      <app-element [data]="data" [categorie]="value"></app-element>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

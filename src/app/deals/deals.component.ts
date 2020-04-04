@@ -12,8 +12,10 @@ export class DealsComponent implements OnInit {
 
   @Output() data: any[] = [];
   @Output() categories: string[] = [];
+  public loading: boolean = false;
 
   ngOnInit() {
+    this.loading = true;
     this.getData();
   }
   
@@ -45,6 +47,7 @@ export class DealsComponent implements OnInit {
       this.shuffleArray(results);
       this.data = [...this.data, ...results];
       this.updateCategories();
+      this.loading = false;
     });
   }
 

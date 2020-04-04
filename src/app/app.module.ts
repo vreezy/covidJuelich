@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { SearchElementComponent } from './search-element/search-element.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadingComponent } from './loading/loading.component';
 
 
 
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     InformationComponent,
     RegisterComponent,
     SearchComponent,
-    SearchElementComponent
+    SearchElementComponent,
+    LoadingComponent
   ],
   imports: [
     RouterModule.forRoot(

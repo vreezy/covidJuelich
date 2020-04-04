@@ -12,8 +12,10 @@ export class SearchComponent implements OnInit {
 
   @Output() data: any[] = [];
   @Output() categories: string[] = [];
+  public loading: boolean = false;
 
   ngOnInit(): void {
+    this.loading = true;
     this.getData("17I6GPitevZTXHUDOJci1ul_Ra3x14DXfhxyan58XZEE");
   }
 
@@ -41,7 +43,7 @@ export class SearchComponent implements OnInit {
 
       categories.sort();
       this.categories =  [...new Set(categories)];
-      
+      this.loading = false;
     });
   }
 
