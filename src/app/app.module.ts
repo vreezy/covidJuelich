@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const appRoutes: Routes = [
+  { path: '',              component: DealsComponent },
   { path: 'offer',         component: DealsComponent },
   { path: 'search',        component: SearchComponent },
   { path: 'information',   component: InformationComponent },
