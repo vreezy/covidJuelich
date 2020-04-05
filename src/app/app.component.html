@@ -2,31 +2,6 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark topnav">
     <div class="container">
-      <!-- <div class="row d-lg-none d-xl-none">
-
-        <div class="col">
-          <div ngbDropdown class="d-inline-block" placement="bottem" autoClose="inside">
-            <button class="btn btn-outline-primary " id="dropdownBasic2" ngbDropdownToggle><span
-                class="navbar-toggler-icon"></span></button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/offer" routerLinkActive="active" href="#">Angebote</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/search" routerLinkActive="active" href="#">Suche</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/register" routerLinkActive="active" href="#">Eintragen</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/information" routerLinkActive="active" href="#">Informationen</a>
-              </li>
-
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <div class="row">
         <div class="col">
           <a class="navbar-brand" href="#/offer">Covid Jülich</a>
@@ -35,9 +10,7 @@
 
       <button class="btn d-lg-none d-xl-none" (click)="toggleSidebar()" *ngIf="!opened"><i class="ms-Icon ms-Icon--GlobalNavButton" aria-hidden="true" style="color: #ffffff"></i></button>
       <button class="btn d-lg-none d-xl-none" (click)="toggleSidebar()" *ngIf="opened" ><i class="ms-Icon ms-Icon--Cancel" aria-hidden="true" style="color: #ffffff"></i></button>
-      
-
-
+ 
       <div class="d-none d-lg-block d-xl-block">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -52,7 +25,9 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/information" routerLinkActive="active" href="#">Informationen</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active" href="#">Kontakt</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -60,7 +35,7 @@
 
   <div class="alert alert-warning" role="alert" *ngIf="!isNewUrl()">
     <div class="container">
-      Bitte aktualisieren Sie ihre Bookmarks auf <a href="https://www.covid-jülich.de" class="alert-link">https://www.covid-jülich.de</a>.
+      <i class="ms-Icon ms-Icon--Info" aria-hidden="true" ></i> Bitte aktualisieren Sie ihre Bookmarks auf <a href="https://www.covid-jülich.de" class="alert-link">https://www.covid-jülich.de</a>.
     </div>
   </div>
 
@@ -78,6 +53,9 @@
         </li>
         <li class="nav-item handyitem">
           <a class="nav-link" class="btn btn-primary btn-lg btn-block" routerLink="/information" routerLinkActive="active" href="#" (click)="toggleSidebar()">Informationen</a>
+        </li>
+        <li class="nav-item handyitem">
+          <a class="nav-link" class="btn btn-primary btn-lg btn-block" routerLink="/contact" routerLinkActive="active" href="#" (click)="toggleSidebar()">Kontakt</a>
         </li>
 
       </ul>

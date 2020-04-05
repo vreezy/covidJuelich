@@ -17,6 +17,7 @@ import { SearchComponent } from './search/search.component';
 import { SearchElementComponent } from './search-element/search-element.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadingComponent } from './loading/loading.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'search',        component: SearchComponent },
   { path: 'information',   component: InformationComponent },
   { path: 'register',      component: RegisterComponent },
+  { path: 'contact',       component: ContactComponent },
   { path: 'impressum',     component: ImpressumComponent },
   
   // { path: '**', component: PageNotFoundComponent }
@@ -44,7 +46,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     SearchComponent,
     SearchElementComponent,
-    LoadingComponent
+    LoadingComponent,
+    ContactComponent
   ],
   imports: [
     RouterModule.forRoot(
