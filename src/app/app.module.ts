@@ -18,16 +18,17 @@ import { SearchElementComponent } from './search-element/search-element.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadingComponent } from './loading/loading.component';
 import { ContactComponent } from './contact/contact.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 
 
 const appRoutes: Routes = [
-  { path: '',              component: DealsComponent },
-  { path: 'offer',         component: DealsComponent },
-  { path: 'search',        component: SearchComponent },
+  { path: '',              component: WelcomeComponent },
+  // { path: 'offer',         component: DealsComponent },
+  // { path: 'search',        component: SearchComponent },
   { path: 'information',   component: InformationComponent },
-  { path: 'register',      component: RegisterComponent },
+  // { path: 'register',      component: RegisterComponent },
   { path: 'contact',       component: ContactComponent },
   { path: 'impressum',     component: ImpressumComponent },
   
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     SearchComponent,
     SearchElementComponent,
     LoadingComponent,
-    ContactComponent
+    ContactComponent,
+    WelcomeComponent
   ],
   imports: [
     RouterModule.forRoot(
